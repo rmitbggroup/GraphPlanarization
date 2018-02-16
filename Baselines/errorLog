@@ -1,0 +1,483 @@
+Menu.c
+	Warning 1.1 getCommand function
+		Invalid command: 
+		Command entered by user is not a valid selection
+
+graph.c
+	Warning 2.1 readGraph function
+		Unable to open file:
+		Filename provided by user is incorrect
+
+	Warning 2.2 readGraph function
+		Incorrect content in file - first line does not contain the 
+		number of vertices in graph.
+		Incorrect file format
+
+	Warning 2.3 readGraph function
+		Incorrect content in file - second line does not contain the 
+		number of vertices in graph.
+		Incorrect file format
+
+	Warning 2.4 readGraph function
+		Incorrect content in file - invalid edge
+		Incorect file format - vertices not in range
+		No longer used.
+
+	Warning 2.5 readGraph function
+		Incorrect content in file - invalid edge
+		Incorrect file format - line does not describe an edge
+
+	Warning 2.6 addEdge function
+		One or more vertices in edge out of range
+		Edge is described by at least one vertex not in range [0, |V|).
+
+	Warning 2.7 readGraph function
+		Incorrect content in file - invalid degree of vertex
+		The vertex has either degree < 0 or larger than |V|-1
+
+	Warning 2.7 addEdge function
+		Edge is a loop - no loops permitted.
+		Some algorithms do not allow multi-edges.
+
+	Warning 2.8: addEdge function
+		Edge is already in graph - no multi-edges permitted
+		Incorrect content in file
+
+	Warning 2.9: readGraph function
+		Vertex is adjacent to more than specified number of vertices
+		Incorrect content in file
+
+	Warning 2.10: readGraph function
+		Error in reading adjacent vertex from file.
+		Incorrect content in file
+
+	Warning 2.11 validEdge function
+		File contains an edge that is a loop
+		Incorrect content in file
+
+	Warning 2.12 validEdge function
+		File contains an invalid edge
+		Incorrect content in file
+
+	Warning 2.13 readFile
+		Edges in file differs from number specified
+		Incorrect specification on number of edges
+
+	Warning 2.14 validateGraph function
+		Vertex w is listed as adjacent to vertex v, but
+		vertex v is not listed as adjacent to vertex w.
+		Graph is not valid
+
+	Warning 2.15 validEdge
+		Vertex w is listed as adjacent to vertex v, but
+		vertex v is not listed as adjacnet to vertex w.
+		Graph in file is not valid
+
+	Warning 2.16 readGraph
+		Vertex v is degree d1, but file only lists d2 adjacent vertices.
+		File does not contain a valid graph.
+
+	Error 2.1: readGraph function
+		Unable to allocate space for graph
+
+	Error 2.2: addEdge2 function
+		Attempting to insert invalid edge into graph
+	
+		
+	Error 2.3: initGraph function
+		Insufficient memory to create graph	
+
+	Error 2.4: readGraphFromFile
+		Unable to read graph from file	
+
+	Error 2.5 readGraphFromFile function
+		Incorrect content in file - second line does not contain the 
+		number of vertices in graph.
+		Incorrect file format
+
+	Error 2.6 readGraphFromFile function
+		Incorrect content in file - invalid edge
+		Incorect file format - vertices not in range
+		No longer used.
+
+	Error 2.7 readGraphFromFile function
+		Incorrect content in file - first line does not contain the 
+		number of vertices in graph.
+		Incorrect file format
+
+
+	Error 2.8 readGraphFromFile function
+		Incorrect content in file - invalid degree of vertex
+		The vertex has either degree < 0 or larger than |V|-1
+
+	Error 2.9 readGraphFromFile function
+		Unable to allocate space for graph
+
+	Error 2.10: readGraphFromFile function
+		Vertex is adjacent to more than specified number of vertices
+		Incorrect content in file
+
+	Error 2.11: readGraphFromFile function 
+		Error in reading adjacent vertex from file.
+		Incorrect content in file
+
+	Error 2.12 readGraphFromFile function
+		Vertex w is listed as adjacent to vertex v, but
+		vertex v is not listed as adjacnet to vertex w.
+		Graph in file is not valid
+
+	Error 2.13 readGraphFromFile function
+		Graph provided was not a valid graph
+
+addVertexAlg.c
+	Error 3.1:  initInfo function
+		Insufficient memory to create information storage
+
+	Error 3.2:  addVertAlg function
+		Error in retrieving adjacent non-forest neighbours
+		The getNFNeighbours function has not found two adjacent
+		neighbours despite Nn=2
+
+	Error 3.3:	countAdjTrees function
+		Unable to allocate memory in countAdjTrees function.
+
+	Error 3.4:	action1 function
+		Function action1 called with incorrect value for Nn.
+		Nn should only be 0 or 1		
+
+	Error 3.5:	action1 function
+		Function called with Nn set at d, but no non-forest
+		neighbour located.
+
+	Error 3.6:	addVertAlg function
+		Select function returned a vertex with Nn=2 and Nf>1
+		Case 3.2, 3.3 and 3.4 only apply when Nf<=1
+
+
+
+graphGen.c
+	Warning 4.1:	genGraph (and genGraph2) function
+		Cannot create graph of n vertices and degree n.
+		(d>n or d<1 or n<1)
+
+	Warning 4.2:	saveGraph function
+		Unable to save graph
+		(No graph provided)
+
+	Warning 4.3:	saveGraph function
+		Unable to open kerri_rand_graph.txt to save graph.
+
+	Warning 4.4:	classicalGen function
+		Cannot create graph of n vertices and degree n.
+		(d>n or d<1 or n<1)
+
+	Warning 4.5: 	genGraph function (and genGraph2)
+	 	Cannot create graph as nd is odd (%d vertices and degree %d)
+		Algorithms for d-regular graphs have a preconditin that nd is
+		even
+		
+	Error 4.1:	genGraph (and genGraph2) function
+		Insufficent memory to create A in genGraph
+		A is an array to hold probability distribution of edges.
+
+	
+	Error 4.2	genGraph (and genGraph2) function
+		Insufficent memory to create graph
+		Cannot allocate memory for adjacency lists
+
+	Error 4.3	genGraph2 function	
+	Unable to create array of edges - insufficient memory
+
+removeVertAlg.c
+	Error 5.1	operation3 function
+		Vertex %d has degree 2 but unable to locate two adjacent vertices
+		
+	Error 5.2	removeVertAlg
+		Unable to locate a vertex in P, yet R is smaller than rho
+		Error message no longer used - This error message enabled me
+		to pick up error in original algorithm.
+
+
+genRandGraph.c
+	Warning 6.1	genGraph3 function
+		Cannot create graph with %d vertices and degree %d
+		User has entered invalid parameters
+
+	Warning 6.2	genGraph3 function
+ 		Cannot create graph as nd is odd (%d vertices and degree %d)
+		Algorithms for d-regular graphs have a preconditin that nd is
+		even
+
+	Error 6.1	genGraph3 function
+		Insufficient memory to create r
+		Cannot allocate memory to hold d-d(v) for vertices
+
+	Error 6.2	genGraph3 function
+		Insufficient memory to create graph
+
+runTests.c
+	Error 7.1	runTestA function
+		Unable to create random graph using the Morgan method
+
+	Error 7.2	runTestB function
+		Unable to create random graph using the Morgan method
+		
+	Error 7.3	runTestA function
+		Unable to open file.
+		Unable to open the file for writing results.
+
+	Error 7.4	createTestGraph function
+		Unable to open file.
+		Unable to open the file for writing results.
+
+	Error 7.5	createTestGraphs function
+		Failure to save to file filename
+		Graph was not created, so cannot save.
+
+	Error 7.6	runTest_removeAlg function
+		Unable to open file.
+		Unable to open the file for writing results.
+
+	Error 7.7	runTest_removeAlg function
+		Unable to open file.
+		Unable to open the file to read test graphs from 
+
+	Error 7.8 	runTestA
+		Timer failed to set correctly
+
+	Error 7.9
+		getrusage function failed
+
+	Error 7.10
+		Unable to open file for writing
+
+
+bollobas.c
+	Warning 8.1	createRandomGraph function
+		Invalid value - cannot have a %d-regular graph
+		User requests a regular graph of degree less than 0
+
+	Error 8.1	createRandomGraph function
+		Insufficient memory to randomly create graph
+		
+	Error 8.2	createRandomGraph function
+		Insufficient memroy to create graph
+
+H_Lau.c
+	Error 9.1	randPartition function
+		Insufficient memory to create partition
+		Cannont allocate memory for partition
+	
+	Error 9.2	randPartition function
+		Insufficient memory to create partition
+		Cannont allocate memory for holding information about neighbours
+		of vertices in partition
+
+	Error 9.3	H_L_alg function
+		Insufficient memory to record class size
+
+K_Alg.c
+	Error 10.1	initK_Info function
+		Inusfficient memory to create information storage
+		Unable to create structure to hold information about P
+
+	Error 10.2	sort function
+		Insufficient memory to sort R
+		Unable to create a secondary array for use with mergesort.
+
+	Error 10.3	pickTreeVert function
+		(value for free) exceeds (current value).
+		Index has gone out of range.
+
+	Error 10.4	pickTreeVert function
+		(value for free) exceeds (current value).
+		Index has gone out of range.
+
+	Error 10.5	createIndex function
+		Insufficient memory to create index into R
+		Unable to create index into R
+	
+	Error 10.6	createIndex function
+		Insufficient memory to create index into R
+		Unable to create index into R
+
+	Error 10.7	pathFinder function
+	      Attempting to find a path between vertices in different components
+		Vertex x and vertex y are not in same component
+
+	Error 10.8	legalOP_Add function
+		Unable to find two vertices in component adjacent to v.
+			
+	
+	Error 10.9	markAsCircuits function
+		Unable to find two vertices in component adjacent to v.
+
+	Error 10.10	createMegaVerts function
+		Unable to create array of megavertices
+		Insufficient memory
+
+	Error 10.11	createMegaVerts function
+		Incorrect size given for P
+
+	Error 10.12	createMegaVerts function
+		Incorrect size given for P (actual size compared to Psize)
+
+	Error 10.13	reduceOp1 function
+		Function is attempting to reduce a vertex that is not a 
+		megavertex.
+
+	Error 10.14	reduceOp2 function
+		Function is attempting to reduce a vertex that is not a 
+		megavertex.
+
+	Error 10.15	checkCompAdd
+		No megavertices adjacent to vertex in this component.
+
+	Error 10.16	findValidPath function
+		Unable to create subpath lists - insufficient memory
+
+	Error 10.17 	findValidPath
+		Unable to find vertex in non-empty list
+
+	Error 10.18	makePath
+		Vertex v is listed as adjacent to two vertices, but unable to 
+		locate these vertices
+
+	Error 10.19	evaluatePath
+		Insufficient memory to create space to evaluate path.
+
+	Error 10.20	checkCompAdd
+		Unable to create space to store megavertex edges
+
+	Error 10.21	getMVEdge
+		List contains more than two megavertices
+		(should only contain one or two)
+
+	Error 10.22	getMVEdge
+		List does not contain sufficient vertices
+		(list has degree 2, but does not have this many stored)
+
+	Error 10.23 locateMegaVertices
+		Function has found more edges than degree of vertex
+		(At most the function should return one edge between 
+		 megavertices for each vertex in P ).
+
+	Error 10.24 locateMegavertices
+		Vertex is adjacent to two vertices in reduced graph, but list
+		contains less than this number
+		
+hybrid.c
+	Error 11.1	hybrid function
+		 Unable to create array age
+		 
+	Error 11.2	hybrid function
+		Error in retrieving adjacent non-forest neighours
+		Unable to find neighbours of vertex v that are not trees
+
+linkList.c
+	Error 12.1	insertInList
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 12.2	insertInList
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 12.3	insertInList
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 12.4	insertAtEnd
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 12.5	insertAtEnd
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 12.6	insertAtStart
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 12.7	insertAtStart
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+linkList2.c
+	Error 13.1	insertInList
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 13.2	insertInList
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 13.3	insertInList
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 13.4	insertAtEnd
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+	Error 13.5	insertAtEnd
+		Unable to create node to insert vertex %d into list in function insertInList
+		System could not allocate memory for node
+
+
+
+K2_Alg.c
+	Error 14.1	selectTriangleVertex
+		Unable to locate two vertices adjacent to vertex with two 
+		neighbours in P
+
+
+	Error 14.2	selectLargeTriangleVertex
+		Unable to locate two vertices adjacent to vertex with two 
+		neighbours in P
+
+
+	Error 14.3	selectLargeTriangleVertex
+		Vertex v is adjacent to two vertices (w1 w2) in different 
+		components - contradicts maximal tree.
+
+	Error 14.4	addable
+		Unable to locate two vertices adjacent to vertex with two 
+		neighbours in P
+
+	Error 14.5	vertDegreeGreaterThanTwo_NonTree
+		Unable to find path between two vertices in single 
+		component
+	
+	Error 14.6	closePaths
+		Unable to locate two vertices adjacent to vertex with two 
+		neighbours in P
+
+	Error 14.7	closePaths
+		Vertex v is adjacent to two vertices (w1 w2) in different 
+		component - contradicts maximal tree.
+	Error 14.8	locateDivergentVertex
+		Vertex v is adjacent to insufficient vertices
+
+	Error 14.9	locateDivergentVertex
+		Unable to find path between w1 and w2, neighbours of v in same component
+
+	Error 14.10	obliterateSmallComponents
+		Unable to locate vertex to remove from path
+
+mixture.c
+	Error 15.1	initialiseR
+		Insufficient memory to create R
+		
+
+	Error 15.2	initialiseR
+		Number of vertices in R exceeds given size
+
+gatherData.c
+	Error 16.1	gatherData
+		Unknown method
+
+	Error 16.2	gatherData
+		Unable to open file
+
+
